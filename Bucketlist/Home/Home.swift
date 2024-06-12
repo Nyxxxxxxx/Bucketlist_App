@@ -1,5 +1,10 @@
 import SwiftUI
 //컨셉 : 파란색 : 항해?
+//수정사항 : 1. Hall of Fame에 지금있는 Product가 Last Achievement로 내려가야 한다.
+// 2. 디자인 파란색으로 모두 바꾸기
+// 3. Hall of Fame 디자인 하기 / 이쁘게..!
+// 4. 클릭하면 Road Map에 추가되기
+// 5. 세팅 마지막에 추가하기
 
 struct Home: View {
     @State private var username: String = ""
@@ -112,19 +117,22 @@ struct Home: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                     
-                    if latestAchievement.isEmpty {
-                        Text("아직 성취내역이 없습니다.")
-                            .font(.subheadline)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(.gray)
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                    } else {
-                        Text(latestAchievement)
-                            .font(.subheadline)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                    }
+                    ProductRow(product: productSamples[0])
+                        .scaleEffect(0.85)
+                    
+//                    if latestAchievement.isEmpty {
+//                        Text("아직 성취내역이 없습니다.")
+//                            .font(.subheadline)
+//                            .frame(maxWidth: .infinity, alignment: .leading)
+//                            .foregroundColor(.gray)
+//                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+//                    } else {
+//                        Text(latestAchievement)
+//                            .font(.subheadline)
+//                            .frame(maxWidth: .infinity, alignment: .leading)
+//                            .foregroundColor(.black)
+//                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+//                    }
                 }
                 // Hall of Fame은 바꾸어야 한다.
                 Text("Latest Achievement")

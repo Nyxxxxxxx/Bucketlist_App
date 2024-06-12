@@ -60,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4000AB32C192D2500B1DAE3 /* Hall_of_Fame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hall_of_Fame;
+			sourceTree = "<group>";
+		};
 		F45293D12BEDA63300F4DEC1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +94,7 @@
 		F462324D2BE4A07B002A4B78 /* Bucketlist */ = {
 			isa = PBXGroup;
 			children = (
+				F4000AB32C192D2500B1DAE3 /* Hall_of_Fame */,
 				F46CB9EA2BF571D600CEC6DF /* Helper */,
 				F47B486F2BF4A19900CBC617 /* Info */,
 				F46EC9282BF04DCF004CEABA /* RoadMap */,

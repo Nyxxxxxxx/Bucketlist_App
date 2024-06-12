@@ -53,7 +53,7 @@ private extension ProductRow{
     
     var footerView: some View {
         HStack(spacing: 0){
-            Text("￦").font(.footnote) + Text("\(product.price)").font(.headline)
+            Text("@").font(.footnote) + Text("\(product.price)").font(.headline)
             Spacer()
             Image(systemName: "heart")
                 .imageScale(.large)
