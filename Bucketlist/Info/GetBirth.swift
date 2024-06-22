@@ -5,9 +5,9 @@ struct GetBirth: View {
     @State private var name: String = ""
     @State private var birthdate: Date = Date()
     @State private var age: Int = 0
+    @State private var navigateToHome = false
     
     var body: some View {
-        NavigationView {
             VStack(spacing: 30) {
                 Image("memo")
                     .resizable()
@@ -18,14 +18,14 @@ struct GetBirth: View {
                     .shadow(color: Color.black.opacity(0.15), radius: 10, x: 5, y: 5)
                 
                 VStack {
-                    Text("Birthdate")
+                    Text("When is your Birthday?")
                         .font(.headline)
                         .multilineTextAlignment(.center)
                     
                     DatePicker("", selection: $birthdate, displayedComponents: .date)
                         .datePickerStyle(CompactDatePickerStyle())
                         .labelsHidden()
-                        .padding(.vertical, 5)
+                        .padding(.top, 20)
                         .frame(maxWidth: .infinity, alignment: .center)
                     
                 }
@@ -34,6 +34,7 @@ struct GetBirth: View {
                 Button(action: {
                     saveBirth()
                     calculateAge()
+                    navigateToHome = true
                 }) {
                     Text("Next")
                         .fontWeight(.bold)
@@ -45,11 +46,18 @@ struct GetBirth: View {
                 }
                 .padding()
                 .navigationTitle("Birthday")
+                NavigationLink(
+                    destination: Home(),
+                    isActive: $navigateToHome,
+                    label: {
+                        EmptyView()
+                    }
+                )
             }
             .padding()
             .onAppear(perform: calculateAge)
         }
-    }
+    
     
     func saveBirth() {
         let userDefaults = UserDefaults.standard

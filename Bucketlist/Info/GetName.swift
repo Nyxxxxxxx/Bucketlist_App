@@ -1,5 +1,7 @@
 import SwiftUI
 
+
+
 struct GetName: View {
     @State private var selectedLanguage: String = "English"
     @State private var name: String = ""
@@ -8,7 +10,6 @@ struct GetName: View {
     var languages = ["English", "Korean"]
     
     var body: some View {
-        NavigationView {
             VStack(spacing: 30) {
                 Image("memo")
                     .resizable()
@@ -21,24 +22,17 @@ struct GetName: View {
                 HStack {
                                     Spacer()
                                     VStack(alignment: .center) {
-                                        Text("Name")
+                                        Text("What is your Name?")
                                             .font(.headline)
                                         TextField("", text: $name)
                                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                                            .padding(.vertical, 10)
+                                            .padding(.top, 20)
+                                            .font(.system(size: 30)) //박스 크기 조절
+                                            
                                     }
                                     Spacer()
                                 }
                                 .padding(.horizontal)
-
-//                VStack(alignment: .leading) {
-//                    Text("Birthdate")
-//                        .font(.headline)
-//                    DatePicker("", selection: $birthdate, displayedComponents: .date)
-//                        .datePickerStyle(CompactDatePickerStyle())
-//                        .padding(.vertical, 5)
-//                }
-//                .padding(.horizontal)
                 
                 Button(action: {saveData()
                     navigateToGetBirth = true}) {
@@ -50,7 +44,7 @@ struct GetName: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                .padding()
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 NavigationLink(
                     destination: GetBirth(),
                     isActive: $navigateToGetBirth,
@@ -61,7 +55,7 @@ struct GetName: View {
             }
             .navigationTitle("Name")
         }
-    }
+    
     
     func saveData() {
         let userDefaults = UserDefaults.standard

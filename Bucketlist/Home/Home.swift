@@ -10,6 +10,7 @@ struct Home: View {
     @State private var username: String = ""
     @State private var age: Int = 0
     @State private var latestAchievement: String = ""
+    @State private var navigateToAchievement = false
 
     var body: some View {
         NavigationView {
@@ -32,7 +33,7 @@ struct Home: View {
                         Spacer() // 왼쪽에 여백 추가
                             .frame(width: 1)
                         
-                        NavigationLink(destination: ContentView(latestAchievement: $latestAchievement)) {
+                        NavigationLink(destination: Main()) {
                             ZStack {
                                 Image("note")
                                     .resizable()
@@ -112,47 +113,37 @@ struct Home: View {
                 
                 // 명예의 전당 페이지
                 VStack {
-                    Text("Hall of Fame")
+                    Text("Latest Achievment")
                         .font(.headline)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                     
-                    ProductRow(product: productSamples[0])
-                        .scaleEffect(0.85)
+                    NavigationLink(destination: CityTourView()){
+                        ProductRow(product: productSamples[0])
+                            .scaleEffect(0.85)
+                    }
                     
-//                    if latestAchievement.isEmpty {
-//                        Text("아직 성취내역이 없습니다.")
-//                            .font(.subheadline)
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                            .foregroundColor(.gray)
-//                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-//                    } else {
-//                        Text(latestAchievement)
-//                            .font(.subheadline)
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                            .foregroundColor(.black)
-//                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-//                    }
                 }
-                // Hall of Fame은 바꾸어야 한다.
-                Text("Latest Achievement")
+                Text("Hall of Fame")
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                 
-                Rectangle()
-                    .fill(Color.gray.opacity(0.2))
-                    .frame(width: 350, height: 60)
-                    .cornerRadius(10)
-                    .shadow(color: Color.primary.opacity(0.33), radius: 1, x: 2, y: 2)
-                    .overlay(
-                        Text(latestAchievement.isEmpty ? "No achievements yet." : latestAchievement)
-                            .foregroundColor(.black)
-                            .padding()
-                    )
-            }
+                ZStack {
+                                Rectangle()
+                                    .fill(Color.white.opacity(0.9))
+                                    .frame(width: 350, height: 60)
+                                    .cornerRadius(10)
+                                
+                            }
+                            .overlay(
+                                Text(latestAchievement.isEmpty ? "No achievements yet." : latestAchievement)
+                                    .foregroundColor(.black)
+                                    .padding()
+                            )
+                        }
             .navigationBarItems(trailing: Button(action: {
-                print("Settings tapped!")
+                print("This service will be open lately")
             }) {
                 Image(systemName: "person.circle")
                     .imageScale(.large)
@@ -163,6 +154,7 @@ struct Home: View {
                 loadUserData()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     private func loadUserData() {

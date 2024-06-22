@@ -8,7 +8,7 @@ struct Info: View {
     var languages = ["English", "Korean"]
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack(spacing: 30) {
                 Image("memo")
                     .resizable()
@@ -58,6 +58,7 @@ struct Info: View {
             .navigationDestination(isPresented: $navigateToGetName) {
                 GetName()
             }
+//            .navigationBarBackButtonHidden(true)
         }
     }
     

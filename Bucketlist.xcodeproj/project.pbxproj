@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40EE7E72C22FF3200EB0F16 /* info_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40EE7E62C22FF3200EB0F16 /* info_class.swift */; };
+		F43B96A82C19C35E006DA4E6 /* Hall_interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B96A72C19C35E006DA4E6 /* Hall_interface.swift */; };
 		F44F03362BF6DA0E00493B34 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F03352BF6DA0E00493B34 /* Info.swift */; };
 		F45293D32BEDA64600F4DEC1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45293D22BEDA64600F4DEC1 /* Home.swift */; };
 		F462324F2BE4A07B002A4B78 /* BucketlistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462324E2BE4A07B002A4B78 /* BucketlistApp.swift */; };
 		F46232512BE4A07B002A4B78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46232502BE4A07B002A4B78 /* ContentView.swift */; };
 		F46232532BE4A07C002A4B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46232522BE4A07C002A4B78 /* Assets.xcassets */; };
 		F46232562BE4A07C002A4B78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46232552BE4A07C002A4B78 /* Preview Assets.xcassets */; };
+		F4638D2C2C2551B900ED149A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4638D2B2C2551B900ED149A /* Main.swift */; };
+		F466A2E92C240DF200A4496D /* CityTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466A2E82C240DF200A4496D /* CityTourView.swift */; };
 		F46A9FF92C129897007FB2E9 /* GetBirth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A9FF82C129897007FB2E9 /* GetBirth.swift */; };
 		F46E6A4E2BEE715F00D9464F /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46E6A4D2BEE715F00D9464F /* Popup.swift */; };
 		F46E6A502BEE746500D9464F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46E6A4F2BEE746500D9464F /* ColorExtension.swift */; };
@@ -28,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F40EE7E62C22FF3200EB0F16 /* info_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info_class.swift; sourceTree = "<group>"; };
+		F43B96A72C19C35E006DA4E6 /* Hall_interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hall_interface.swift; sourceTree = "<group>"; };
 		F44F03352BF6DA0E00493B34 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		F45293D22BEDA64600F4DEC1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F462324B2BE4A07B002A4B78 /* Bucketlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bucketlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +41,8 @@
 		F46232502BE4A07B002A4B78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F46232522BE4A07C002A4B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F46232552BE4A07C002A4B78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4638D2B2C2551B900ED149A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F466A2E82C240DF200A4496D /* CityTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTourView.swift; sourceTree = "<group>"; };
 		F46A9FF82C129897007FB2E9 /* GetBirth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBirth.swift; sourceTree = "<group>"; };
 		F46E6A4D2BEE715F00D9464F /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		F46E6A4F2BEE746500D9464F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -63,6 +71,7 @@
 		F4000AB32C192D2500B1DAE3 /* Hall_of_Fame */ = {
 			isa = PBXGroup;
 			children = (
+				F43B96A72C19C35E006DA4E6 /* Hall_interface.swift */,
 			);
 			path = Hall_of_Fame;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 				F46232522BE4A07C002A4B78 /* Assets.xcassets */,
 				F46232542BE4A07C002A4B78 /* Preview Content */,
 				F46E6A4F2BEE746500D9464F /* ColorExtension.swift */,
+				F4638D2B2C2551B900ED149A /* Main.swift */,
 			);
 			path = Bucketlist;
 			sourceTree = "<group>";
@@ -132,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F46EC9292BF04DE5004CEABA /* RoadMap.swift */,
+				F466A2E82C240DF200A4496D /* CityTourView.swift */,
 			);
 			path = RoadMap;
 			sourceTree = "<group>";
@@ -142,6 +153,7 @@
 				F44F03352BF6DA0E00493B34 /* Info.swift */,
 				F47CEB012BFF3A1900E24A9F /* GetName.swift */,
 				F46A9FF82C129897007FB2E9 /* GetBirth.swift */,
+				F40EE7E62C22FF3200EB0F16 /* info_class.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -240,7 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43B96A82C19C35E006DA4E6 /* Hall_interface.swift in Sources */,
 				F46E6A522BEE7B5000D9464F /* AddList.swift in Sources */,
+				F40EE7E72C22FF3200EB0F16 /* info_class.swift in Sources */,
+				F466A2E92C240DF200A4496D /* CityTourView.swift in Sources */,
 				F46E6A4E2BEE715F00D9464F /* Popup.swift in Sources */,
 				F4DB4C5D2BE7683900179C8F /* ProductRow.swift in Sources */,
 				F44F03362BF6DA0E00493B34 /* Info.swift in Sources */,
@@ -249,6 +264,7 @@
 				F46A9FF92C129897007FB2E9 /* GetBirth.swift in Sources */,
 				F46E6A502BEE746500D9464F /* ColorExtension.swift in Sources */,
 				F4DB4C602BE76A2600179C8F /* Product.swift in Sources */,
+				F4638D2C2C2551B900ED149A /* Main.swift in Sources */,
 				F4DB4C5A2BE74F8600179C8F /* Finish.swift in Sources */,
 				F45293D32BEDA64600F4DEC1 /* Home.swift in Sources */,
 				F462324F2BE4A07B002A4B78 /* BucketlistApp.swift in Sources */,

@@ -108,9 +108,9 @@ struct ContentView: View {
                         }
                     }
                 }
-                .popup(isPresented: $showingPopup) {
-                    AddList(newFruit: $newFruit, onAdd: addNewFruit)
-                }
+//                .popup(isPresented: $showingPopup) {
+//                    AddList(newFruit: $newFruit, onAdd: addNewFruit)
+//                }
                 .overlay(
                     Group {
                         if showingCelebration {
